@@ -9,6 +9,7 @@ import java.util.Set;
         uniqueConstraints = @UniqueConstraint(name="uk_camion_matricula", columnNames = "matricula"))
 public class Camion {
 
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)    
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_camion")
     private Long id;
