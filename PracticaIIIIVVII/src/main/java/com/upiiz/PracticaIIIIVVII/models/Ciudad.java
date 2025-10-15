@@ -8,7 +8,7 @@ import java.util.Set;
 @Table(name = "ciudad",
         uniqueConstraints = @UniqueConstraint(name="uk_ciudad_codigo", columnNames = "codigo"))
 public class Ciudad {
-
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_ciudad")
     private Long id;
