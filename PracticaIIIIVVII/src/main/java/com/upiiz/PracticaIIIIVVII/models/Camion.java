@@ -8,10 +8,10 @@ import java.util.Set;
 @Table(name = "camion",
         uniqueConstraints = @UniqueConstraint(name="uk_camion_matricula", columnNames = "matricula"))
 public class Camion {
-
-    @Schema(accessMode = Schema.AccessMode.READ_ONLY)    
+  
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_camion")
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     private Long id;
 
     @Column(nullable = false, length = 20)
