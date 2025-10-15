@@ -11,6 +11,7 @@ import java.util.Set;
         uniqueConstraints = @UniqueConstraint(name="uk_camionero_rfc", columnNames = "rfc"))
 public class Camionero {
 
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY)
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_camionero")
     private Long id;
